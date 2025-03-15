@@ -243,86 +243,84 @@
                     <h2 class="title is-3">Dataset</h2>
                     <div class="content has-text-justified">
                         <p>
-                            The dataset for this challenge is derived from AvaMERG. It is a benchmark dataset for Avatar-based Multimodal Empathetic Response Generation. AvaMERG extended the original Empathetic Dialogue dataset by considering multimodal response. 
+                             The dataset for this challenge is derived from AvaMERG. 
+                             It is a benchmark dataset for Avatar-based Multimodal Empathetic Response Generation. 
+                             
+                             AvaMERG extended the original Empathetic Dialogue dataset by considering multimodal response. 
                         </p>
 
                         <p>
-                            Statistics of AvaMERG are shown in the following table.
+                             This dataset contains 33 event types and 22 argument roles, with 12,867 audios for training your model. The detailed information is recorded in the <a href="#baseline">baseline codes</a> "/challenge/event-schema.json".
                         </p>
-                        <div class="publication-image">
-                            <img width="100%" src="./static/images/statistics.png">
-                          </div>
-                          <br>
                         <p>
                             Example of a sample:
                         </p>
-                        <pre id="jsonShow">
-{
-    "conversation_id": "01118",
-    "speaker_profile": {
-        "age": "young", 
-        "gender": "male",
-        "timbre": "high",
-        "ID": 28
-    },
-    "listener_profile": {
-        "age": "young",
-        "gender": "female",
-        "timbre": "mid",
-        "ID": 18
-    },
-    "topic": "Life Events",
-    "turns": [
-        {
-            "turn_id": "0",
-            "context": "I was shocked when the Eagles won the Super Bowl.",
-            "dialogue_history": [
-                {
-                    "index": 0,
-                    "role": "speaker",
-                    "utterance": "I was shocked when the Eagles won the Super Bowl."
-                }
-            ],
-            "response": "Yes, I think everyone was shocked! The real question is, were you happy?",
-            "chain_of_empathy": {
-                "speaker_emotion": "surprised",
-                "event_scenario": "The Eagles winning the Super Bowl",
-                "emotion_cause": "Surprise at an unexpected sports victory",
-                "goal_to_response": "Determining the speaker's happiness about the win"
-            }
-        },
-        {
-            "turn_id": "1",
-            "context": "I was shocked when the Eagles won the Super Bowl.",
-            "dialogue_history": [
-                {
-                    "index": 0,
-                    "role": "speaker",
-                    "utterance": "I was shocked when the Eagles won the Super Bowl."
-                },
-                {
-                    "index": 1,
-                    "role": "listener",
-                    "utterance": "Yes, I think everyone was shocked! The real question is, were you happy?"
-                },
-                {
-                    "index": 2,
-                    "role": "speaker",
-                    "utterance": "I was very happy."
-                }
-            ],
-            "response": "That's awesome.. Hopefully they win again in the future!",
-            "chain_of_empathy": {
-                "speaker_emotion": "surprised",
-                "event_scenario": "The Philadelphia Eagles winning the Super Bowl.",
-                "emotion_cause": "Unexpected victory of the Eagles in the Super Bowl.",
-                "goal_to_response": "Reinforcing happiness and optimism about future games."
-            }
-        }
-    ]
-},</pre>
+                        <pre id="jsonShow">{
+                            "conversation_id": "01118",
+                            "speaker_profile": {
+                                "age": "young",
+                                "gender": "male",
+                                "timbre": "high",
+                                "ID": 28
+                            },
+                            "listener_profile": {
+                                "age": "young",
+                                "gender": "female",
+                                "timbre": "mid",
+                                "ID": 18
+                            },
+                            "topic": "Life Events",
+                            "turns": [
+                                {
+                                    "turn_id": "0",
+                                    "context": "I was shocked when the Eagles won the Super Bowl.",
+                                    "dialogue_history": [
+                                        {
+                                            "index": 0,
+                                            "role": "speaker",
+                                            "utterance": "I was shocked when the Eagles won the Super Bowl."
+                                        }
+                                    ],
+                                    "response": "Yes, I think everyone was shocked! The real question is, were you happy?",
+                                    "chain_of_empathy": {
+                                        "speaker_emotion": "surprised",
+                                        "event_scenario": "The Eagles winning the Super Bowl",
+                                        "emotion_cause": "Surprise at an unexpected sports victory",
+                                        "goal_to_response": "Determining the speaker's happiness about the win"
+                                    }
+                                },
+                                {
+                                    "turn_id": "1",
+                                    "context": "I was shocked when the Eagles won the Super Bowl.",
+                                    "dialogue_history": [
+                                        {
+                                            "index": 0,
+                                            "role": "speaker",
+                                            "utterance": "I was shocked when the Eagles won the Super Bowl."
+                                        },
+                                        {
+                                            "index": 1,
+                                            "role": "listener",
+                                            "utterance": "Yes, I think everyone was shocked! The real question is, were you happy?"
+                                        },
+                                        {
+                                            "index": 2,
+                                            "role": "speaker",
+                                            "utterance": "I was very happy."
+                                        }
+                                    ],
+                                    "response": "That's awesome.. Hopefully they win again in the future!",
+                                    "chain_of_empathy": {
+                                        "speaker_emotion": "surprised",
+                                        "event_scenario": "The Philadelphia Eagles winning the Super Bowl.",
+                                        "emotion_cause": "Unexpected victory of the Eagles in the Super Bowl.",
+                                        "goal_to_response": "Reinforcing happiness and optimism about future games."
+                                    }
+                                }
+                            ]
+                        },</pre>
                         <p>
-                            The datasets (audio/video) have been avaliable on <a href="https://pan.baidu.com/s/1flf2ZOfRAnEqPcSUUBJnMg?pwd=ih5n ">Baidu Drive</a> and the label json files are in the <a href="#baseline">baseline codes/data/</a>.
+                            The datasets (audio) are avaliable on <a href="https://drive.google.com/file/d/1Ot7PN3fTwQ76Ij49UG-_Qt9TMBF_Bjio/view?usp=sharing">Google Drive</a> and the label json files are in the <a href="#baseline">baseline codes</a> "/challenge/data/ACE05EN".
                         </p>
 
                     </div>
@@ -342,7 +340,7 @@
                             <tbody align="center" valign="center">
                             <tr>
                               <td>Training data and participant instruction release for all shared tasks</td>
-                              <td>15 Mar, 2025</td>
+                              <td>XXX, 2025</td>
                             </tr>
                             <tr>
                               <td>Evaluation deadline for all shared tasks</td>
@@ -426,7 +424,7 @@
                       
 <!--                         <p>
                             Link to <a href="#">Codalab</a>
-                        </p>
+                        </p> -->
                         <p>
                             
                             Participants can submit at <a href="https://www.codabench.org/competitions/">Codabench</a>.
@@ -437,9 +435,7 @@
                             Feel free to contact us at <a href="22021110280@stu.xidian.edu.cn">email</a>.
                             
                         
-                        </p> -->
-
-                        <p> Comming Soon </p>
+                        </p>
                     </div>
                 </div>
             </div>
